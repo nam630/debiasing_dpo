@@ -1,0 +1,343 @@
+_wandb:
+    value:
+        cli_version: 0.25.0
+        e:
+            y7snah9p84kuiyj45aptpkaw24bgotyx:
+                args:
+                    - --local_rank=0
+                    - --save_path
+                    - /scratch/m000228/tmp/checkpoint/qwen3b-dpo-b32-w1e-1-eps2
+                    - --save_steps
+                    - "-1"
+                    - --logging_steps
+                    - "1"
+                    - --eval_steps
+                    - "-1"
+                    - --train_batch_size
+                    - "32"
+                    - --micro_train_batch_size
+                    - "1"
+                    - --pretrain
+                    - Qwen/Qwen2.5-3B-Instruct
+                    - --param_dtype
+                    - bf16
+                    - --max_epochs
+                    - "2"
+                    - --max_len
+                    - "8192"
+                    - --zero_stage
+                    - "3"
+                    - --learning_rate
+                    - "1e-6"
+                    - --beta
+                    - "0.1"
+                    - --dataset
+                    - json@/users/hjnam/sycophancy/train_data/dpo_capability_openrlhf_v2/q3b
+                    - --apply_chat_template
+                    - --chosen_key
+                    - chosen
+                    - --rejected_key
+                    - rejected
+                    - --attn_implementation
+                    - flash_attention_2
+                    - --load_checkpoint
+                    - --packing_samples
+                    - --gradient_checkpointing
+                    - --use_wandb
+                    - 173ea73581c8f47fb8aa18a4b33040f44e4ebdd6
+                cpu_count: 112
+                cpu_count_logical: 112
+                cudaVersion: "12.7"
+                disk:
+                    /:
+                        total: "1888556142592"
+                        used: "55698726912"
+                email: hjnam@stanford.edu
+                executable: /projects/m000228/scyophancy/bin/python3.12
+                git:
+                    commit: 7f32779a1019ac2ec96047b2109b9205aa4e1696
+                    remote: https://github.com/OpenRLHF/OpenRLHF.git
+                gpu: NVIDIA H100 80GB HBM3
+                gpu_count: 2
+                gpu_nvidia:
+                    - architecture: Hopper
+                      cudaCores: 16896
+                      memoryTotal: "85520809984"
+                      name: NVIDIA H100 80GB HBM3
+                      uuid: GPU-53a30c9d-ba9c-3af9-c523-90615b112e2a
+                    - architecture: Hopper
+                      cudaCores: 16896
+                      memoryTotal: "85520809984"
+                      name: NVIDIA H100 80GB HBM3
+                      uuid: GPU-a0f9a6ee-c973-a08f-c2f3-0eb1b9b0bc34
+                host: n03
+                memory:
+                    total: "2164228759552"
+                os: Linux-5.15.0-1053-nvidia-x86_64-with-glibc2.35
+                program: -m openrlhf.cli.train_dpo_capability
+                python: CPython 3.12.0
+                root: /users/hjnam/OpenRLHF
+                slurm:
+                    cluster_name: slurm
+                    conf: /cm/shared/apps/slurm/var/etc/slurm/slurm.conf
+                    cpu_bind: quiet,cores
+                    cpu_bind_list: ""
+                    cpu_bind_type: cores
+                    cpu_bind_verbose: quiet
+                    cpus_on_node: "2"
+                    cpus_per_task: "2"
+                    distribution: cyclic
+                    gpus: "2"
+                    gpus_on_node: "2"
+                    gtids: "0"
+                    job_account: marlowe-m000228-free
+                    job_cpus_per_node: "2"
+                    job_end_time: "1772288133"
+                    job_gid: "1543400513"
+                    job_id: "181708"
+                    job_name: bash
+                    job_nodelist: n03
+                    job_num_nodes: "1"
+                    job_partition: batch
+                    job_qos: medium
+                    job_start_time: "1772259333"
+                    job_uid: "1695314838"
+                    job_user: hjnam
+                    jobid: "181708"
+                    launch_node_ipaddr: 171.67.99.201
+                    localid: "0"
+                    mem_per_cpu: "64000"
+                    mpi_type: pmix
+                    nnodes: "1"
+                    nodeid: "0"
+                    nodelist: n03
+                    nprocs: "1"
+                    ntasks: "1"
+                    oom_kill_step: "0"
+                    pmix_mapping_serv: (vector,(0,1,1))
+                    pmixp_abort_agent_port: "33389"
+                    prio_process: "0"
+                    procid: "0"
+                    pty_port: "43967"
+                    pty_win_col: "120"
+                    pty_win_row: "27"
+                    srun_comm_host: 171.67.99.201
+                    srun_comm_port: "35633"
+                    step_gpus: 1,4
+                    step_id: "0"
+                    step_launcher_port: "35633"
+                    step_nodelist: n03
+                    step_num_nodes: "1"
+                    step_num_tasks: "1"
+                    step_tasks_per_node: "1"
+                    stepid: "0"
+                    submit_dir: /users/hjnam
+                    submit_host: login-02
+                    task_pid: "2253621"
+                    tasks_per_node: "1"
+                    topology_addr: n03
+                    topology_addr_pattern: node
+                    tres_per_task: cpu=2
+                    umask: "0022"
+                startedAt: "2026-02-28T06:45:39.263942Z"
+                writerId: y7snah9p84kuiyj45aptpkaw24bgotyx
+        m:
+            - "1": eval/global_step
+              "6":
+                - 3
+              "7": []
+            - "1": train/global_step
+              "6":
+                - 3
+              "7": []
+            - "2": eval/*
+              "5": 1
+              "6":
+                - 1
+              "7": []
+            - "2": train/*
+              "5": 2
+              "6":
+                - 1
+              "7": []
+        python_version: 3.12.0
+        t:
+            "1":
+                - 1
+                - 5
+                - 11
+                - 49
+                - 51
+                - 53
+                - 71
+                - 98
+            "2":
+                - 1
+                - 5
+                - 11
+                - 49
+                - 51
+                - 53
+                - 71
+                - 98
+            "3":
+                - 2
+                - 7
+                - 13
+                - 16
+                - 66
+            "4": 3.12.0
+            "5": 0.25.0
+            "6": 5.2.0
+            "10":
+                - 20
+            "12": 0.25.0
+            "13": linux-x86_64
+adam_betas:
+    value:
+        - 0.9
+        - 0.95
+adam_offload:
+    value: false
+apply_chat_template:
+    value: true
+attn_implementation:
+    value: flash_attention_2
+aux_loss_coef:
+    value: 0
+beta:
+    value: 0.1
+chosen_key:
+    value: chosen
+ckpt_path:
+    value: ./ckpt/checkpoints_dpo
+dataset:
+    value: json@/users/hjnam/sycophancy/train_data/dpo_capability_openrlhf_v2/q3b
+dataset_probs:
+    value: null
+dataset_split:
+    value: train
+deepcompile:
+    value: false
+disable_ds_ckpt:
+    value: false
+disable_fast_tokenizer:
+    value: false
+ds_tensor_parallel_size:
+    value: 1
+eval_dataset:
+    value: null
+eval_split:
+    value: test
+eval_steps:
+    value: -1
+full_determinism:
+    value: false
+grad_accum_dtype:
+    value: null
+gradient_checkpointing:
+    value: true
+gradient_checkpointing_use_reentrant:
+    value: false
+input_template:
+    value: null
+ipo:
+    value: false
+l2:
+    value: 0
+label_smoothing:
+    value: 0
+learning_rate:
+    value: 1e-06
+load_checkpoint:
+    value: true
+load_in_4bit:
+    value: false
+local_rank:
+    value: 0
+logging_steps:
+    value: 1
+lora_alpha:
+    value: 16
+lora_dropout:
+    value: 0
+lora_rank:
+    value: 0
+lr_scheduler:
+    value: cosine_with_min_lr
+lr_warmup_ratio:
+    value: 0.03
+max_ckpt_mem:
+    value: 1e+08
+max_ckpt_num:
+    value: 3
+max_epochs:
+    value: 2
+max_len:
+    value: 8192
+max_norm:
+    value: 1
+max_samples:
+    value: 1000000
+micro_train_batch_size:
+    value: 1
+min_lr_ratio:
+    value: 0.1
+nll_loss_coef:
+    value: 0
+overlap_comm:
+    value: false
+packing_samples:
+    value: true
+param_dtype:
+    value: bf16
+pretrain:
+    value: Qwen/Qwen2.5-3B-Instruct
+prompt_key:
+    value: null
+ref_offload:
+    value: false
+ref_pretrain:
+    value: Qwen/Qwen2.5-3B-Instruct
+rejected_key:
+    value: rejected
+ring_attn_size:
+    value: 1
+ring_head_stride:
+    value: 1
+save_hf_ckpt:
+    value: false
+save_path:
+    value: /scratch/m000228/tmp/checkpoint/qwen3b-dpo-b32-w1e-1-eps2
+save_steps:
+    value: -1
+seed:
+    value: 42
+target_modules:
+    value: all-linear
+tokenizer_chat_template:
+    value: null
+train_batch_size:
+    value: 32
+use_ds_universal_ckpt:
+    value: false
+use_liger_kernel:
+    value: false
+use_ms:
+    value: false
+use_tensorboard:
+    value: null
+use_wandb:
+    value: 173ea73581c8f47fb8aa18a4b33040f44e4ebdd6
+wandb_group:
+    value: null
+wandb_org:
+    value: null
+wandb_project:
+    value: openrlhf_train_dpo
+wandb_run_name:
+    value: exp_0227T22:44
+zero_stage:
+    value: 3
+zpg:
+    value: 1

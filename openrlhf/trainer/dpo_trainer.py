@@ -162,7 +162,8 @@ class DPOTrainer(ABC):
                 # nll loss
                 if not self.nll_loss:
                     nll_loss = 0
-
+                
+                # add the reasoning + prediction score (score = ground truth)
                 loss = preference_loss + aux_loss * self.args.aux_loss_coef + nll_loss * self.args.nll_loss_coef
                 self.strategy.backward(loss, self.model, self.optimizer)
                 self.strategy.optimizer_step(self.optimizer, self.model, self.scheduler)

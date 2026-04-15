@@ -1,0 +1,92 @@
+{
+  "os":  "Linux-5.15.0-1053-nvidia-x86_64-with-glibc2.35",
+  "python":  "CPython 3.12.0",
+  "startedAt":  "2026-02-27T00:18:02.392903Z",
+  "args":  [
+    "--local_rank=0",
+    "--save_path",
+    "/scratch/m000228/tmp/checkpoint/llama3b-dpo-b32-self-score_sft",
+    "--save_steps",
+    "-1",
+    "--logging_steps",
+    "1",
+    "--eval_steps",
+    "-1",
+    "--train_batch_size",
+    "32",
+    "--micro_train_batch_size",
+    "1",
+    "--pretrain",
+    "meta-llama/Llama-3.2-3B-Instruct",
+    "--param_dtype",
+    "bf16",
+    "--max_epochs",
+    "1",
+    "--max_len",
+    "8192",
+    "--zero_stage",
+    "3",
+    "--learning_rate",
+    "5e-7",
+    "--beta",
+    "0.1",
+    "--dataset",
+    "json@/users/hjnam/sycophancy/train_data/dpo_capability_openrlhf/l3b",
+    "--apply_chat_template",
+    "--chosen_key",
+    "chosen",
+    "--rejected_key",
+    "rejected",
+    "--attn_implementation",
+    "flash_attention_2",
+    "--load_checkpoint",
+    "--packing_samples",
+    "--gradient_checkpointing",
+    "--use_wandb",
+    "173ea73581c8f47fb8aa18a4b33040f44e4ebdd6"
+  ],
+  "program":  "-m openrlhf.cli.train_dpo_capability",
+  "git":  {
+    "remote":  "https://github.com/OpenRLHF/OpenRLHF.git",
+    "commit":  "7f32779a1019ac2ec96047b2109b9205aa4e1696"
+  },
+  "email":  "hjnam@stanford.edu",
+  "root":  "/users/hjnam/OpenRLHF",
+  "host":  "n20",
+  "executable":  "/projects/m000228/scyophancy/bin/python3.12",
+  "cpu_count":  112,
+  "cpu_count_logical":  112,
+  "gpu":  "NVIDIA H100 80GB HBM3",
+  "gpu_count":  2,
+  "disk":  {
+    "/":  {
+      "total":  "1888556142592",
+      "used":  "113908174848"
+    }
+  },
+  "memory":  {
+    "total":  "2164228784128"
+  },
+  "gpu_nvidia":  [
+    {
+      "name":  "NVIDIA H100 80GB HBM3",
+      "memoryTotal":  "85520809984",
+      "cudaCores":  16896,
+      "architecture":  "Hopper",
+      "uuid":  "GPU-fe6c4650-f030-568b-90c4-7d60af62a144"
+    },
+    {
+      "name":  "NVIDIA H100 80GB HBM3",
+      "memoryTotal":  "85520809984",
+      "cudaCores":  16896,
+      "architecture":  "Hopper",
+      "uuid":  "GPU-778d742a-e4e1-4c3f-0fb7-5f8406b4d62b"
+    }
+  ],
+  "cudaVersion":  "12.7",
+  "slurm":  {
+    "conf":  "/cm/shared/apps/slurm/var/etc/slurm/slurm.conf",
+    "job_id":  "180914"
+  },
+  "writerId":  "zv9boi8n5ixjbjor4nitcr2uxkyv5is8"
+}

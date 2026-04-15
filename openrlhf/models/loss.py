@@ -63,6 +63,7 @@ class SFTLoss(nn.Module):
         self.token_level_loss = token_level_loss
 
     def forward(self, per_token_logps: torch.Tensor, loss_mask: torch.Tensor) -> torch.Tensor:
+        print(per_token_logps.shape, "\n\n", loss_mask.shape, "\n\n", loss_mask)
         loss = (
             masked_mean(-per_token_logps, loss_mask, dim=None)
             if self.token_level_loss

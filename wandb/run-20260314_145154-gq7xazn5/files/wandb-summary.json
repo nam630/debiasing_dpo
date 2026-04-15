@@ -1,0 +1,1 @@
+{"_runtime":412,"train/acc":1,"_timestamp":1.7735255278299925e+09,"train/loss_mean":0.2691083624958992,"train/lr":5.000000058430487e-08,"train/reject_reward":-0.7595949172973633,"train/acc_mean":1,"_wandb":{"runtime":412},"train/loss":0.23374946415424347,"train/global_step":32,"_step":31,"train/chosen_reward":0.6856460571289062}
